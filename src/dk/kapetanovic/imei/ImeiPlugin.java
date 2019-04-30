@@ -95,8 +95,8 @@ public class ImeiPlugin extends CordovaPlugin {
             String[] imeis = new String[phoneCount];
             for(int i = 0; i < phoneCount; i++){
                 imeis[i] = telephonyManager.getImei(i);
-                callbackContext.sendPluginResult(OK(id));
             }
+            callbackContext.sendPluginResult(OK(imeis));
         }
     }
 
