@@ -92,9 +92,9 @@ public class ImeiPlugin extends CordovaPlugin {
             callbackContext.sendPluginResult(OK(null));
         }
         else{
-            String[] imeis = new String[phoneCount];
+            JSONObject json = new JSONObject();
             for(int i = 0; i < phoneCount; i++){
-                imeis[i] = telephonyManager.getImei(i);
+                json.put(i, telephonyManager.getImei(i));
             }
             callbackContext.sendPluginResult(OK(imeis));
         }
