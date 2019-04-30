@@ -7,7 +7,7 @@ var toError = function (obj) {
 
 module.exports = function (cb) {
   window.cordova.exec(function (result) {
-    cb(null, result.data)
+    cb(null, result)
   }, function (err) {
     cb(toError(err))
   }, 'ImeiPlugin', 'getDeviceId', [])
