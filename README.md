@@ -2,14 +2,17 @@
 
 Cordova plugin for retrieving IMEI of the device.
 
-    cordova plugin add cordova-plugin-android-imei
+    cordova plugin add https://github.com/Chearic/cordova-plugin-android-imei.git
 
 ## Usage
 
-The plugin uses the [getDeviceId](https://developer.android.com/reference/android/telephony/TelephonyManager.html#getDeviceId()) method of the *TelephonyManager* instance to retrieve the IMEI.
+The plugin uses the [getImei](https://developer.android.com/reference/android/telephony/TelephonyManager.html#getImei(int)) method of the *TelephonyManager* instance to retrieve the IMEI.
 
 ```javascript
 cordova.plugins.IMEI(function (err, imei) {
-  console.log('imei', imei)
-})
+  let i = 0;
+  while (imei[i]) {
+    console.log(imei[i]);
+  }
+});
 ```
