@@ -13,6 +13,7 @@ cordova.plugins.IMEI(function (err, imei) {
   let i = 0;
   while (imei[i]) {
     console.log(imei[i]);
+    i++;
   }
 });
 ```
